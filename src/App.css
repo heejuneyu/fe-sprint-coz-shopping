@@ -1,0 +1,111 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.headerbox {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+height: 80px;
+
+background: #FFFFFF;
+box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+}
+
+#image1{
+  margin-left: 76px;
+  margin-top: 20px;
+  width: 55px;
+  height: 35px;
+}
+
+.sitename {
+  margin-right: 10px;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 700; 
+}
+
+.HamburgerBtn {
+  margin-top: 15px;
+  margin-left: 65%;
+  width: 50px;
+  height: 50px;
+  cursor: grab;
+}
+.triangle {
+  width: 30px;
+  background-color: #FFFF;
+  height: 30px;
+  border-radius: 4px;
+  box-shadow:-2px 2px rgb(178 178 178 / 0.3);
+  transform: rotate(135deg);
+  position: absolute;
+  z-index: 3;
+}
+
+#modallist{
+  height: 0px;
+}
+
+#menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#item-list-body {
+  background-color: #bc9eff0e;
+  padding: 5rem;
+  display: table-cell;
+  width: 100%;
+}
+
+#item-list-container {
+  display: table;
+  margin: 0 auto;
+  width: 100%;
+  height: calc(100vh - 4rem);
+}
+
+#item-list-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  padding-bottom: 1rem;
+  margin: 0.5rem;
+}
