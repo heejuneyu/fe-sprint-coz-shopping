@@ -41,10 +41,9 @@
   display: flex;
   flex-direction: row;
   width: 95%;
-height: 80px;
-
-background: #FFFFFF;
-box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+  height: 80px;
+  background: #FFFFFF;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 #image1{
@@ -91,16 +90,15 @@ box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
 
 #item-list-body {
   background-color: #bc9eff0e;
-  padding: 5rem;
-  display: table-cell;
   width: 100%;
+  background-color: white;
+  
 }
 
 #item-list-container {
-  display: table;
-  margin: 0 auto;
-  width: 100%;
+  margin-top: 8px;  width: 100%;
   height: calc(100vh - 4rem);
+  
 }
 
 #item-list-title {
@@ -108,4 +106,55 @@ box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
   font-weight: 800;
   padding-bottom: 1rem;
   margin: 0.5rem;
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 15px;
+
+}
+
+.footer1{
+  background-color: white;
+}
+
+.titlenamebox {
+  
+ display: flex;
+}
+
+#titlename{
+  margin: auto;
+  width: 170px;
+}
+
+.imagebox{
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+ width: 550px;
+ margin-top: 50px;
+}
+
+.mainbox{
+ 
+  margin-top: 8px;  width: 100%;
+  height: calc(100vh - 4rem);
+}
+
+.merchandiselistbox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 900px;
+  margin: auto;
+}
+#boldtitle {
+  font-weight: 800;
+  font-size: 30px;
+  margin-top: 20px;
+  
+}
+
+#imagesize{
+  width: 264px;
+  height: 210px;
 }
