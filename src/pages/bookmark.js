@@ -1,12 +1,22 @@
 import React from 'react';
 
 
-export default function Bookmarkpage(){
-    return(
-        <div id="item-list-container">
-        <div id="item-list-body">
-          <div id="item-list-title">북마크내역</div>
-        </div>
-      </div>
-    )
+export default function Mainpage(){
+
 }
+// import {Children, createContext, useState} from "react";
+
+
+// const bookmarkContext = createContext({
+//   boomark: [],
+//   setBookmark: () => {},
+// })
+
+// const App : React.FC = ({ Children}) => {
+// const [bookmark, setBookmark] = useState([]);
+
+// return <bookmarkContext.Provider value = {bookmark, setBookmark}>
+//   {Children}
+//   </bookmarkContext.Provider>
+
+// }

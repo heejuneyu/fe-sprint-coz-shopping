@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import './App.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGift } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
         
 const ModalContent = styled.div`
     width: 160px;
@@ -52,8 +55,8 @@ const Header = () => {
           <ModalContent>
             <div id ="menu">
               <p id= "modallist">000님, 안녕하세요!</p>
-              <Link to="/product/list" style={{ textDecoration: "none" }}>상품리스트 페이지</Link>
-              <Link to="/bookmark" style={{ textDecoration: "none" }}>북마크 페이지</Link>
+              <Link to="/product/list" style={{ textDecoration: "none" }}><FontAwesomeIcon icon={faGift} />상품리스트 페이지</Link>
+              <Link to="/bookmark" style={{ textDecoration: "none" }}><FontAwesomeIcon icon={faStar} />북마크 페이지</Link>
               </div> 
           </ModalContent>
         ): null}
