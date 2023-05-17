@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Modal from '../components/imageModal';
 
 
 
@@ -20,6 +21,19 @@ export default function Mainpage(){
     console.log(err)
   })
   }, [])
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+  const openModal = (imageUrl) => {
+    setSelectedImage(imageUrl);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedImage('');
+  };
+
     return(
       <div class= "mainbox">
         <div id ="boldtitle">상품리스트</div>
@@ -27,8 +41,8 @@ export default function Mainpage(){
       {products.map((product)=>(
         <div class="merchandiselist" key={product.id}>
         {product.image_url !== null?(
-        <img id ="imagesize" src={product.image_url}></img>
-        ) : <img id ="imagesize" src={product.brand_image_url}></img>}
+        <img id ="imagesize" src={product.image_url} onClick={() => openModal(product.image_url)} ></img>
+        ) : <img id ="imagesize" src={product.brand_image_url} onClick={() => openModal(product.brand_image_url)} ></img>}
 
         <div id ="topexplain">
           {product.title !==null ?(<div>{product.title}</div>): <div>{product.brand_name}</div>}
@@ -40,7 +54,7 @@ export default function Mainpage(){
        </div>
        ))}
        </div>
+       {showModal && <Modal imageUrl={selectedImage} onClose={closeModal} />}
       </div>
-      
     )
 }

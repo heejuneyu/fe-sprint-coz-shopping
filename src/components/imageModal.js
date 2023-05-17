@@ -1,12 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-// export default function Modal() {
-//   return (
-//     // <div className="modal">
-//     //   <div className="modal-content">
-//     //     <img src={imageUrl} alt="Large Image" />
-//     //     <button onClick={onClose}>Close</button>
-//     //   </div>
-//     // </div>
-//   );
-// }
+
+export default function Modal({ imageUrl, onClose }) {
+  return (
+    <div className="modal">
+      <div className="modal-content">
+        <img class ="modalimage" src={imageUrl} />
+        <div className="close-button" onClick={onClose}>
+          X
+          </div>
+      </div>
+    </div>
+  );
+}
