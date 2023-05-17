@@ -46,11 +46,11 @@ const Header = () => {
         };
     return (
          <div class="headerbox">
-        <img id = "image1" src= "logo1.png" ></img>
+        <img id = "image1" src= "../logo1.png" ></img>
         <div class="sitename">
         <Link to="/" style={{ textDecoration: "none" }}>COZ Shopping</Link>
         </div>
-        <img class="HamburgerBtn" src = "Hamburgericon.png" onClick={openModalHandler}></img>
+        <img class="HamburgerBtn" src = "../Hamburgericon.png" onClick={openModalHandler}></img>
         {isOpen ? (
           <ModalContent>
             <div id ="menu">

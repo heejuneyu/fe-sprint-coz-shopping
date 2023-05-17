@@ -163,7 +163,11 @@ gap: 5px;
   grid-template-rows: repeat(3, 1fr);
   gap: 5px; /* 이미지 간의 간격 설정 */
   margin: 0 auto; /* 가운데 정렬을 위해 필요한 경우 */
+  
+}
 
+.productslist > div:nth-child(n+13) {
+  display: none; /* 13번째 이후의 요소는 숨김 처리 */
 }
 
 #topexplain{
