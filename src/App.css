@@ -123,6 +123,7 @@
 #titlename{
   margin: auto;
   width: 170px;
+  cursor: grab;
 }
 
 .imagebox{
@@ -155,6 +156,7 @@ gap: 5px;
   width: 264px;
   height: 210px;
   border-radius: 10px;
+  cursor: grab;
 }
 
 .productslist{
@@ -173,4 +175,9 @@ gap: 5px;
 #topexplain{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  font-weight: 800;
+}
+
+#topimage{
+  cursor: grab;
 }

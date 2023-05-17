@@ -2,6 +2,7 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
+
 export default function List(){
   const [products, setproducts] = useState([])
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -27,6 +28,10 @@ export default function List(){
     setFilteredProducts([]);
   };
 
+
+  const [showModal, setShowModal] = useState(false);
+  const [selectedImage, setSelectedImage] = useState('');
+
   const productList = filteredProducts.length > 0 ? filteredProducts : products;
     return(
         <div id="item-list-container">
@@ -34,14 +39,14 @@ export default function List(){
           <div id="item-list-title">
             <div class="imagebox">
               
-           <img class='all' src="../titleimage/all.png"></img>
-            <img class='merchandise' src="../titleimage/merchandise.png"></img>
-            <img class='category' src="../titleimage/category.png"></img>
-            <img class='event' src="../titleimage/event.png"></img>
-            <img class='brand' src="../titleimage/brand.png"></img>
+           <img id='topimage' onClick={() =>setFilteredProducts(products)} src="../titleimage/all.png"></img>
+            <img id='topimage'onClick={() =>filterResult('Product')} src="../titleimage/merchandise.png"></img>
+            <img id='topimage' onClick={() =>filterResult('Category')} src="../titleimage/category.png"></img>
+            <img id='topimage' onClick={() =>filterResult('Exhibition')} src="../titleimage/event.png"></img>
+            <img id='topimage' onClick={() =>filterResult('Brand')} src="../titleimage/brand.png"></img>
            </div>
             <div class ="titlenamebox">
-            <div onClick={() =>setproducts(products)} id ="titlename" >전체</div>
+            <div onClick={() =>setFilteredProducts(products)} id ="titlename" >전체</div>
             <div onClick={() =>filterResult('Product')} id="titlename">상품</div>
             <div onClick={() =>filterResult('Category')} id="titlename">카테고리</div>
             <div onClick={() =>filterResult('Exhibition')} id="titlename">기획전</div>
@@ -56,7 +61,7 @@ export default function List(){
   <div class="merchandiselist" key={product.id}>
     {product.image_url !== null?(
     <img id ="imagesize" src={product.image_url}></img>
-    ) : <img id ="imagesize" src={product.brand_image_url}></img>}
+    ) : <img id ="imagesize" src={product.brand_image_url} ></img>}
 
     <div id ="topexplain">
       {product.title !==null ?(<div>{product.title}</div>): <div>{product.brand_name}</div>}
@@ -68,6 +73,7 @@ export default function List(){
    </div>
    ))}
    </div>
+
         </div>
       </div>
     )
