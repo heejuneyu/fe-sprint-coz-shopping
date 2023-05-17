@@ -40,7 +40,7 @@
 .headerbox {
   display: flex;
   flex-direction: row;
-  width: 95%;
+  width: 100%;
   height: 80px;
   background: #FFFFFF;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
@@ -141,20 +141,34 @@
 }
 
 .merchandiselistbox{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
   margin: auto;
+  border-radius: 10px;
 }
 #boldtitle {
   font-weight: 800;
   font-size: 30px;
   margin-top: 20px;
-  
 }
 
 #imagesize{
   width: 264px;
   height: 210px;
+  border-radius: 10px;
+}
+
+.productslist{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px; /* 이미지 간의 간격 설정 */
+  margin: 0 auto; /* 가운데 정렬을 위해 필요한 경우 */
+
+}
+
+#topexplain{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }

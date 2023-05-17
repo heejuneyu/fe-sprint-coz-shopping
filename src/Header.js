@@ -17,7 +17,7 @@ const ModalContent = styled.div`
     position: absolute;
     margin-top: 70px;
     z-index: 3;
-    margin-left:82%;
+    margin-left:83%;
 
     &::before {
     content: "";
@@ -50,11 +50,10 @@ const Header = () => {
         <img class="HamburgerBtn" src = "Hamburgericon.png" onClick={openModalHandler}></img>
         {isOpen ? (
           <ModalContent>
-          
             <div id ="menu">
               <p id= "modallist">000님, 안녕하세요!</p>
-              <Link to="/itemlistpage" style={{ textDecoration: "none" }}>상품리스트 페이지</Link>
-              <Link to="/bookmarkpage" style={{ textDecoration: "none" }}>북마크 페이지</Link>
+              <Link to="/product/list" style={{ textDecoration: "none" }}>상품리스트 페이지</Link>
+              <Link to="/bookmark" style={{ textDecoration: "none" }}>북마크 페이지</Link>
               </div> 
           </ModalContent>
         ): null}

@@ -27,9 +27,13 @@ export default function Mainpage(){
       {products.map((product)=>(
         <div class="merchandiselist" key={product.id}>
           <img id ="imagesize" src={product.image_url}></img>
-          <div>
+          <div id ="topexplain">
           <div>{product.title}</div>
+          <div>{product.discountPercentage}</div>
+          <div>{product.sub_title}</div>
           <div>{product.price}원</div>
+          <div>
+          </div>
           </div>
          </div>
          ))}
