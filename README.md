@@ -4,9 +4,5 @@
 
 
 
-구현기능
--modal
--toast
--라우터
--api데이터 가져오기
+구현기능 :modal, toast, 라우터, api데이터 가져오기
 
