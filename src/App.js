@@ -18,8 +18,10 @@ const App = () => {
       <Header/>
       <Routes>
         <Route path="/" element={<Mainpage />} />
+        
         <Route path="/product/list" element={<List />} />
         <Route path="/pages/bookmark" element={<Bookmark />} />
+        
       </Routes>
       <mainpage></mainpage>
       </div>
