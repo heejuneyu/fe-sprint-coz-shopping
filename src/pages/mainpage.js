@@ -2,11 +2,13 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Modal from '../components/imageModal';
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Mainpage(){
-
+ 
   const [products, setproducts] = useState([])
 
   useEffect(()=> {
@@ -34,6 +36,12 @@ export default function Mainpage(){
     setSelectedImage('');
   };
 
+    // const [isFavorite, setIsFavorite] = useState(false);
+  
+    // const toggleFavorite = () => {
+    //   setIsFavorite(!isFavorite);
+    // };
+    const notify = () => toast("북마크 되었습니다")
     return(
       <div class= "mainbox">
         <div id ="boldtitle">상품리스트</div>
@@ -51,6 +59,11 @@ export default function Mainpage(){
         <div>{product.sub_title}</div>
         {product.price !==null ?(<div>{product.price}원</div>) : <div></div>}
         </div>
+        <div class="starbtn" onClick={notify}>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} />
+        
+      </div>
+      <ToastContainer></ToastContainer>
        </div>
        ))}
        </div>
@@ -58,3 +71,4 @@ export default function Mainpage(){
       </div>
     )
 }
+

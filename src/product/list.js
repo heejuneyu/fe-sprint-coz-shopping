@@ -2,6 +2,10 @@ import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Modal from '../components/imageModal';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function List(){
   const [products, setproducts] = useState([])
@@ -41,6 +45,8 @@ export default function List(){
     setSelectedImage('');
   };
 
+  const notify2 = () => toast("북마크 되었습니다")
+
   const productList = filteredProducts.length > 0 ? filteredProducts : products;
     return(
         <div id="item-list-container">
@@ -79,8 +85,16 @@ export default function List(){
     <div>{product.sub_title}</div>
     {product.price !==null ?(<div>{product.price}원</div>) : <div></div>}
     </div>
-   </div>
+        <div class="starbtn" onClick={notify2}>
+        <FontAwesomeIcon icon={faStar} color={'yellow'} />
+        
+      </div>
+      <ToastContainer></ToastContainer>
+    </div>
+
+   
    ))}
+   
    </div>
    {showModal && <Modal imageUrl={selectedImage} onClose={closeModal} />}
         </div>

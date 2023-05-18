@@ -1,11 +1,8 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
 import Header from './Header';
 import Footer from './Footer';
-import { useState } from 'react';
-import styled from 'styled-components';
 import List from './product/list';
 import Bookmark from './pages/bookmark';
 import Mainpage from './pages/mainpage';
@@ -22,7 +19,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Mainpage />} />
         <Route path="/product/list" element={<List />} />
-        <Route path="/bookmark" element={<Bookmark />} />
+        <Route path="/pages/bookmark" element={<Bookmark />} />
       </Routes>
       <mainpage></mainpage>
       </div>
