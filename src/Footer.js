@@ -1,9 +1,10 @@
 import React from 'react';
-
+import './App.css';
 const Footer = () => {
   return (
-    <footer>
-      Copyright @ 2023 Code States
+    <footer class ="footer1">
+      개인정보 처리방침 | 이용 약관 <br></br>
+      All rights reserved @ Codestates
     </footer>
   );
 };

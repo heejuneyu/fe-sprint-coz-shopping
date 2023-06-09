@@ -3,6 +3,9 @@ import styled from 'styled-components';
 import './App.css';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGift } from "@fortawesome/free-solid-svg-icons";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
         
 const ModalContent = styled.div`
     width: 160px;
@@ -17,7 +20,7 @@ const ModalContent = styled.div`
     position: absolute;
     margin-top: 70px;
     z-index: 3;
-    margin-left:82%;
+    margin-left:83%;
 
     &::before {
     content: "";
@@ -43,18 +46,17 @@ const Header = () => {
         };
     return (
          <div class="headerbox">
-        <img id = "image1" src= "logo1.png" ></img>
+        <img id = "image1" src= "../logo1.png" ></img>
         <div class="sitename">
         <Link to="/" style={{ textDecoration: "none" }}>COZ Shopping</Link>
         </div>
-        <img class="HamburgerBtn" src = "Hamburgericon.png" onClick={openModalHandler}></img>
+        <img class="HamburgerBtn" src = "../Hamburgericon.png" onClick={openModalHandler}></img>
         {isOpen ? (
           <ModalContent>
-          
             <div id ="menu">
               <p id= "modallist">000님, 안녕하세요!</p>
-              <Link to="/itemlistpage" style={{ textDecoration: "none" }}>상품리스트 페이지</Link>
-              <Link to="/bookmarkpage" style={{ textDecoration: "none" }}>북마크 페이지</Link>
+              <Link to="/product/list" ><FontAwesomeIcon icon={faGift} />상품리스트 페이지</Link>
+              <Link to="/pages/bookmark" ><FontAwesomeIcon icon={faStar} />북마크 페이지</Link>
               </div> 
           </ModalContent>
         ): null}
